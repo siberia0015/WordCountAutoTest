@@ -1,4 +1,4 @@
-package AutoTest.wordcount;
+package ref;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

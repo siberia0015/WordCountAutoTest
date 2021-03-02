@@ -1,6 +1,4 @@
-package AutoTest.wordcount;
-
-import auto.test.wordcount.GitRepoCloner;
+package ref;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

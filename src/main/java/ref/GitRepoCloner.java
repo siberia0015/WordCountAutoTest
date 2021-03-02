@@ -1,4 +1,4 @@
-package auto.test.wordcount;
+package ref;
 
 import java.io.File;
 import java.util.HashMap;

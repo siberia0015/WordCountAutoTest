@@ -1,4 +1,4 @@
-package AutoTest.wordcount;
+package ref;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;

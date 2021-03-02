@@ -8,7 +8,7 @@ https://github.com/ZhaoYi1031/WordCountAutoTest
 
 改造之前，由于我们需要先抽取出一些API，这些API或多或少在原项目中都有实现，我们可以作为参考
 
-目前这边想到的API大约有这些：
+目前这边想到功能大约有这些：
 
 1. 从Git克隆项目到本地
 2. 生成测试数据
@@ -16,3 +16,169 @@ https://github.com/ZhaoYi1031/WordCountAutoTest
     - 把这个txt对应的答案文件存在指定目录下
 3. 编译并执行同学们的代码，执行的输入文件就是第2步中的txt文件，生成的测试结果和第二步中的答案进行对比
 4. 将每个同学执行的用例通过数记录下来，存入csv文件中。
+
+
+具体API
+
+## FileUtil 
+
+```java
+public class FileUtil {
+   /**
+    * 判断两个文件内容是否一样，注意：传入的是文件路径，而非文件内容！
+    *
+    * @param fileAPath 文件A的路径
+    * @param fileBPath 文件B的路径
+    * @param encoding  编码  如果不指定，默认UTF-8
+    * @return 内容一致则返回true 不一致则返回false
+    */
+   public static boolean isSameContent(String fileAPath, String fileBPath, String encoding) {
+      // TODO
+      return false;
+   }
+
+   /**
+    * 以指定编码读取文件内容
+    *
+    * @param filePath 文件路径
+    * @param encoding 编码 如果不指定，默认UTF-8
+    * @return
+    */
+   public static String content(String filePath, String encoding) {
+      // TODO
+      return null;
+   }
+
+   /**
+    * 在rootFolder目录下，创建targetFolder名称的文件夹
+    * eg：
+    * rootFolder : c:/git
+    * targetFolder: 12345
+    * 执行后，则在git目录下创建了12345这个文件夹
+    *
+    * @param rootFolder   targetFolder所在的文件夹
+    * @param targetFolder 需要创建的文件夹
+    * @return 创建成功与否，成功为true，不成功为false
+    */
+   public static boolean createFolder(String rootFolder, String targetFolder) {
+      // TODO
+      return false;
+   }
+
+   /**
+    * 删除一个文件或者文件夹，如果文件夹里面有内容，则里面的内容也要递归删除掉
+    *
+    * @param file 文件或者文件夹
+    * @return
+    */
+   public static boolean deleteFile(String file) {
+      // TODO
+      return false;
+   }
+}
+```
+
+## GitUtil
+
+```java
+public class GitUtil {
+   /**
+    * 克隆url到指定目录
+    * eg
+    * url：https://github.com/GreyZeng/WordCountAutoTest.git
+    * localPath: C:/git/download
+    * 则执行完毕后，会在C盘git目录下的download目录下，会有一个文件夹名称为WordCountAutoTest的仓库
+    * 不需要考虑目录存在与否的情况，假设给的localPath是合法的，由调用这个API的地方来判断
+    *
+    * @param url
+    * @param localPath
+    * @return 是否克隆成功, 成功为true，不成功为false
+    */
+   public static boolean cloneRepo(String url, String localPath) {
+      // TODO
+      return false;
+   }
+}
+```
+
+CSVUtil
+
+```java
+/**
+ * 生成CSV
+ *
+ * @author <a href="mailto:410486047@qq.com">Grey</a>
+ * @date 2021/3/2
+ * @since
+ */
+public class CSVUtil {
+    /**
+     * 将content写入csv中
+     * PS： content的格式请写这个API的人定好
+     * csvLocation是csv的路径，如果不存在，需要新建
+     *
+     * @param content     内容
+     * @param csvLocation csv的路径
+     * @return 如果成功则返回true，不成功则返回false
+     */
+    public static boolean exportToCSV(String content, String csvLocation) {
+        // TODO
+        // 参考auto.test.wordcount.Main.java文件中第100，101行
+        return false;
+    }
+}
+```
+
+Executor接口，用于执行程序并测试
+```java
+public interface Executor {
+    /**
+     * 执行程序
+     *
+     * @param src    源码目录
+     * @param input  测试用例
+     */
+    Result exec(String src, String input);
+}
+```
+
+不同语言实现这个接口即可，例如:
+Java测试程序
+
+```java
+public class JavaExecutor implements Executor {
+    @Override
+    public Result exec(String src, String input) {
+        // TODO
+        return null;
+    }
+}
+```
+
+C++测试程序
+
+```java
+public class CppExecutor implements Executor {
+    @Override
+    public Result exec(String src, String input) {
+        // TODO
+        return null;
+    }
+}
+```
+
+Python测试程序
+
+```java
+public class PythonExecutor implements Executor {
+    @Override
+    public Result exec(String src, String input) {
+        // TODO
+        return null;
+    }
+}
+```
+
+
+
+
