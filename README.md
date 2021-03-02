@@ -20,86 +20,9 @@ https://github.com/ZhaoYi1031/WordCountAutoTest
 
 具体API
 
-## FileUtil 
+## FileUtil 已完成
 
-```java
-public class FileUtil {
-   /**
-    * 判断两个文件内容是否一样，注意：传入的是文件路径，而非文件内容！
-    *
-    * @param fileAPath 文件A的路径
-    * @param fileBPath 文件B的路径
-    * @param encoding  编码  如果不指定，默认UTF-8
-    * @return 内容一致则返回true 不一致则返回false
-    */
-   public static boolean isSameContent(String fileAPath, String fileBPath, String encoding) {
-      // TODO
-      return false;
-   }
-
-   /**
-    * 以指定编码读取文件内容
-    *
-    * @param filePath 文件路径
-    * @param encoding 编码 如果不指定，默认UTF-8
-    * @return
-    */
-   public static String content(String filePath, String encoding) {
-      // TODO
-      return null;
-   }
-
-   /**
-    * 在rootFolder目录下，创建targetFolder名称的文件夹
-    * eg：
-    * rootFolder : c:/git
-    * targetFolder: 12345
-    * 执行后，则在git目录下创建了12345这个文件夹
-    *
-    * @param rootFolder   targetFolder所在的文件夹
-    * @param targetFolder 需要创建的文件夹
-    * @return 创建成功与否，成功为true，不成功为false
-    */
-   public static boolean createFolder(String rootFolder, String targetFolder) {
-      // TODO
-      return false;
-   }
-
-   /**
-    * 删除一个文件或者文件夹，如果文件夹里面有内容，则里面的内容也要递归删除掉
-    *
-    * @param file 文件或者文件夹
-    * @return
-    */
-   public static boolean deleteFile(String file) {
-      // TODO
-      return false;
-   }
-}
-```
-
-## GitUtil
-
-```java
-public class GitUtil {
-   /**
-    * 克隆url到指定目录
-    * eg
-    * url：https://github.com/GreyZeng/WordCountAutoTest.git
-    * localPath: C:/git/download
-    * 则执行完毕后，会在C盘git目录下的download目录下，会有一个文件夹名称为WordCountAutoTest的仓库
-    * 不需要考虑目录存在与否的情况，假设给的localPath是合法的，由调用这个API的地方来判断
-    *
-    * @param url
-    * @param localPath
-    * @return 是否克隆成功, 成功为true，不成功为false
-    */
-   public static boolean cloneRepo(String url, String localPath) {
-      // TODO
-      return false;
-   }
-}
-```
+## GitUtil 已完成
 
 ## CSVUtil
 
@@ -181,6 +104,7 @@ public class PythonExecutor implements Executor {
 }
 ```
 
+### NodeJS测试程序
 
 
 
