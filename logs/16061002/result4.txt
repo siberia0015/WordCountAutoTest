@@ -1,3 +1,0 @@
-characters: 773076
-words: 73874
-lines: 1471
