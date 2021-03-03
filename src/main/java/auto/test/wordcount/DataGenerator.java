@@ -38,7 +38,16 @@ public class DataGenerator {
             }
         }
         // 30%的概率是其他字符
-        return (char) ((int) (Math.random() * 128));
+		int noneAlpha = (int) (Math.random() * 127);
+		double ctrlChance = (double) noneAlpha / (double) 31;
+		if (ctrlChance < 0.2) {
+			noneAlpha = (int) ('\r');
+		} else if (ctrlChance < 0.4) {
+			noneAlpha = (int) ('\n');
+		} else if (ctrlChance < 1) {
+			noneAlpha = (int) ('\t');
+		}
+        return (char) (noneAlpha);
     }
 
 }
