@@ -3,7 +3,6 @@ package auto.test.wordcount.utils;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Random;
 
 import static java.nio.charset.Charset.forName;
 import static java.nio.file.Files.readAllBytes;
@@ -82,7 +81,6 @@ public class FileUtil {
     }
 
 
-
     /**
      * 将内容写入文件，返回文件路径
      *
@@ -113,4 +111,16 @@ public class FileUtil {
         System.out.println("generate an empty txt file  " + txtFile.getAbsolutePath());
         return new String[]{file.getAbsolutePath(), txtFile.getAbsolutePath()};
     }
+
+    /**
+     * 获取文件所在的文件夹
+     *
+     * @param filePath 文件的全路径
+     * @return
+     */
+    public static String getFolder(String filePath) {
+        return filePath.substring(0,filePath.lastIndexOf(File.separator));
+    }
+
+
 }
