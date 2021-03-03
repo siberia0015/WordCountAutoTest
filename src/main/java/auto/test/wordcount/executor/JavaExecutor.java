@@ -1,7 +1,5 @@
 package auto.test.wordcount.executor;
 
-import auto.test.wordcount.Result;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -22,13 +20,13 @@ public class JavaExecutor implements Executor {
      * @return
      */
     @Override
-    public Result exec(String mainFile, String input) {
+    public void exec(String mainFile, String input) {
         String defaultClassPath = getFolder(mainFile);
         String mainClass = getCompileClassName(mainFile);
         javac(defaultClassPath, mainFile);
         java(defaultClassPath, mainClass, input);
-        return null;
     }
+
 
     /**
      * 获取mainFile编译后的名字，默认就是mainFile的文件名

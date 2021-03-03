@@ -14,5 +14,5 @@ public interface Executor {
      * @param src    源码目录
      * @param input  测试用例
      */
-    Result exec(String src, String input);
+    void exec(String src, String input);
 }

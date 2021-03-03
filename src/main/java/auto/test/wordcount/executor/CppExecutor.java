@@ -10,8 +10,8 @@ import auto.test.wordcount.Result;
  */
 public class CppExecutor implements Executor {
     @Override
-    public Result exec(String src, String input) {
+    public void exec(String src, String input) {
         // TODO
-        return null;
+
     }
 }
