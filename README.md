@@ -20,6 +20,8 @@ https://github.com/ZhaoYi1031/WordCountAutoTest
 
 具体API
 
+## DataGenerator 数据生成器 已完成
+
 ## FileUtil 已完成
 
 ## GitUtil 已完成
