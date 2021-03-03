@@ -40,4 +40,5 @@ public class DataGenerator {
         // 30%的概率是其他字符
         return (char) ((int) (Math.random() * 128));
     }
+
 }
